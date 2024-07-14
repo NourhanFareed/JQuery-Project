@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yummy</title>
+        <!--?========> Animate.CSS <========-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+        <!--?========> Google Fonts <========-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet">
+        <!--?========> BoxIcon  <========-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+        <!--?========> Bootstrap Style Sheet <========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/all.min.css">
+
+
+        <!--?========> Main style Sheet <========-->
+        <link rel="stylesheet" href="CSS/style.css">
+
+        <!--?========> Favicon <========-->
+
+        <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    </head>
+
+    <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true" class="scrollspy-example"
+        tabindex="0">
+        <!-- ?==============>Start LoadingPage <==============-->
+        <div class="loadingPage w-100">
+            <div id="loader" class="loader mx-auto">
+                <i class="fa-solid fa-spinner fa-spin fa-5x text-white"></i>
+            </div>
+        </div>
+        <div class="secondLoadingPage d-none">
+            <div id="Secondloader" class="loader mx-auto">
+                <i class="fa-solid fa-spinner fa-spin fa-5x text-white"></i>
+            </div>
+        </div>
+        <!-- ?==============>End LoadingPage <==============-->
+        <!-- !====================================================================================================! -->
+
+        <!-- <section class="main d-flex justify-content-between align-items-center" id="scroll"> -->
+        <!--*========>Start Navbar <========-->
+        <section class="nav position-fixed" id="nav">
+            <header class="header bg-black d-flex justify-content-between align-items-start flex-column" id="header">
+                <div class="navsLinks">
+                    <ul
+                        class="ulList d-flex flex-column align-items-start justify-content-start list-unstyled p-1 mt-3  ">
+                        <li class="nav-item py-0 ">
+                            <a href="#search" class="nav-link" id="searchBtn">search</a>
+                        </li>
+                        <li class="nav-item py-0 ">
+                            <a href="#categories" class="nav-link" id="categories">Categories</a>
+                        </li>
+                        <li class="nav-item py-0 ">
+                            <a href="#area" class="nav-link" id="area">Area</a>
+                        </li>
+                        <li class="nav-item py-0 ">
+                            <a href="#ingredients" class="nav-link" id="ingredients">Ingredients</a>
+                        </li>
+                        <li class="nav-item py-0 ">
+                            <a href="#contact" class="nav-link" id="contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copyRight mx-2">
+                    <ul class="list-unstyled d-flex justify-content-start align-items-center ">
+                        <li class="mx-2 fs-6">
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="mx-2 fs-6">
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="mx-2 fs-6">
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyP text-white">Copyright Â© 2019 All Rights
+                        Reserved.</p>
+                </div>
+
+            </header>
+            <nav class="navbar bg-white d-flex justify-content-center align-items-center mx-auto">
+                <div class="sideNav container-fluid d-flex justify-content-between align-items-center mx-auto flex-column"
+                    id="sideNav">
+                    <a class="navbar-brand pb-5 top-0" href="#">
+                        <img src="images/logo.png" alt="Logo" width="50" height="50"
+                            class="d-inline-block align-text-top">
+                    </a>
+
+                    <div class="open text-black pb-5 mx-auto" id="open">
+                        <i class="menu-close-icon fa-solid fa-bars fa-2x me-3"></i>
+                    </div>
+
+                    <ul
+                        class="list-unstyled d-flex flex-column align-items-center justify-content-center me-3 pt-5 bottom-0">
+                        <li>
+                            <a href="#" class="sideLinks text-black">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sideLinks text-black">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </nav>
+
+        </section>
+        <!--*========>End Navbar <========-->
+
+        <!-- !====================================================================================================! -->
+
+        <!-- ^ =========> Start of Search <==========-->
+        <section class="searchPage d-none" id="searchPage">
+            <div class="container  pt-2">
+                <div class="searchGroupBtns row">
+                    <div class="col-6">
+                        <input onkeyup="searchByName(this.value)" placeholder="Search By First Name" id="searchByName"
+                            class="form-control w-100" name="text" type="text" />
+                    </div>
+                    <div class="col-6">
+                        <input onkeyup="searchByFirstLetter(this.value)" maxlength="3"
+                            placeholder="Search By First Letter" id="searchByFirstLetter" class="form-control w-100"
+                            name="text" type="text" />
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- ^ =========> End of Search <==========-->
+
+        <!-- !====================================================================================================! -->
+
+        <!-- & =========> Start of Home <==========-->
+
+        <section
+            class="home w-100 pt-2 position-relative min-vh-100 justify-content-between align-items-center flex-column"
+            id="home">
+            <div class="container position-relative my-5">
+                <div class="dataContainer row d-flex justify-content-start align-items-start w-100 g-3"
+                    id="dataContainer">
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- & =========> End of Home <==========-->
+
+        <!-- !====================================================================================================! -->
+
+        <!-- ? =========> End of Contact <========== -->
+
+        <div class="container-fluid position-relative">
+            <div class="row d-flex align-items-center justify-content-between w-100 g-3 flex-wrap">
+                <div class="contact min-vh-100 d-flex justify-content-center align-items-center d-none"
+                    id="contactPage">
+                    <form id="myForm">
+                        <div class="container w-75 text-center">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <input class="form-control" type="text" id="name" name="name"
+                                        placeholder="Enter Your Name" required>
+                                    <span class="error alert alert-danger w-100 mt-2 d-none" id="nameError"></span>
+                                    <!-- <div id="nameError" class="alert alert-danger w-100 mt-2 d-none">
+                                                                Special characters and numbers not allowed
+                                                            </div> -->
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" type="email" id="email" name="email"
+                                        placeholder="Enter Your Email" required>
+                                    <span class="error alert alert-danger w-100 mt-2 d-none" id="emailError"></span>
+                                    <!-- <div id="emailError" class="alert alert-danger w-100 mt-2 d-none">
+                                                                Email not valid *exemple@yyy.zzz
+                                                            </div> -->
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" type="tel" id="phone" name="phone"
+                                        placeholder="Enter Your Phone" required>
+                                    <span class="error alert alert-danger w-100 mt-2 d-none" id="phoneError"></span>
+                                    <!-- <div id="phoneError" class="alert alert-danger w-100 mt-2 d-none">
+                                                                Enter valid Phone Number
+                                                            </div> -->
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" type="number" id="age" name="age"
+                                        placeholder="Enter Your Age" required>
+                                    <span class="error alert alert-danger w-100 mt-2 d-none" id="ageError"></span>
+                                    <!-- <div id="ageError" class="alert alert-danger w-100 mt-2 d-none">
+                                                                Enter valid age
+                                                            </div> -->
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" type="password" id="password" name="password"
+                                        placeholder="Enter Your Password" required>
+                                    <span class="error alert alert-danger w-100 mt-2 d-none " id="passwordError"></span>
+                                    <!-- <div id="passwordError" class="alert alert-danger w-100 mt-2 d-none">
+                                                                Enter valid password *Minimum eight characters, at least one letter and one
+                                                                number:*
+                                                            </div> -->
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" type="password" id="repassword" name="repassword"
+                                        placeholder="Repassword" required>
+                                    <span class="error alert alert-danger w-100 mt-2 d-none"
+                                        id="repasswordError"></span>
+                                    <!-- <div id="repasswordError" class="alert alert-danger w-100 mt-2 d-none">
+                                                                Enter valid repassword
+                                                            </div> -->
+                                </div>
+                            </div>
+                            <!-- <button id="submit" type="submit" disabled>Submit</button> -->
+                            <button id="submit" disabled class="btn btn-outline-danger px-2 mt-3">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ? =========> End of Contact <========== -->
+
+        <!--!========> JS File <========-->
+
+        <script src="JS/bootstrap.bundle.min.js"></script>
+        <script src="JS/jquery-3.7.1.min.js"></script>
+        <script src="JS/main.js"></script>
+    </body>
+
+</html>
